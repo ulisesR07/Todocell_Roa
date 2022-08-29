@@ -1,0 +1,120 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=DynaPuff:wght@500&display=swap');
+
+body{
+
+header{
+
+    .bgnav{
+        background-color: rgb(127, 218, 232);
+    }
+
+    .navbar-brand{
+        text-shadow: 0 0 5px #333;
+        font-weight: bold;
+}
+
+    .navbar-brand::after{
+        content: "Todocell";
+}
+
+    .nav-link{
+    color:rgb(132, 242, 242) !important ;
+    text-transform: capitalize;
+    text-shadow: 0 0 5px #333;
+}
+
+.jumbotron{
+    background-image: url(img/logo.jpg);
+    background-size: cover;
+    background-position: top;
+    color: rgb(132, 242, 242);
+    border-radius: 0;
+    margin: 0;
+    text-shadow: 0 0 5px #fff;
+}
+
+.btn-primary{
+    background-color:rgb(29, 249, 183) ;
+}
+
+.btn-primary:hover{
+    background-color:rgb(42, 125, 125) ;
+}
+
+.btn {
+    background-color: rgb(2, 2, 74);
+    margin: 5px 5px 5px 5px ;
+}
+
+}
+
+main{
+
+    h2{
+        background-color: rgb(151, 222, 242);
+        text-align: center;
+        text-transform: capitalize;
+        color: #fff;
+        padding: 10 px;
+        margin: 0;
+    }
+
+    .al{
+        background-image: url(multimedia/android-vs-ios-bg.png);
+        background-size: cover;
+        background-position: center;
+        height: 400px;
+    }
+
+    .ar{
+
+        
+            h3{
+                text-align: center;
+                color: #2a7d7d;
+            }
+            .ar p::selection{
+                color: rgb(132, 242, 242);
+                background-color: #70e7bf ;
+            }
+
+            
+
+    }
+
+    .productos{
+        height: auto;
+        background-color: rgb(110, 137, 235);
+    }
+
+    .btn{
+        margin-top: 5px;
+        background-color: rgb(2, 2, 74);
+        
+    }
+}
+
+footer{
+    background-color: #ffffff;
+    background-image: linear-gradient(90deg, #ffffff 0%, #7fdae8 46%, #1df9b7 100%);
+    text-align: center;
+    color: #fff;
+    font-family:'DynaPuff', cursive;
+    padding: 20px;
+
+    .redes{
+        font-size: 30px;
+        letter-spacing: 10px;
+    }
+}
+p::first-letter{
+    color: springgreen;
+}
+
+
+}
