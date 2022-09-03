@@ -1,16 +1,56 @@
-*{
-    margin: 0;
-    padding: 0;
-}
+// *{
+//     margin: 0;
+//     padding: 0;
+// }
 
 @import url('https://fonts.googleapis.com/css2?family=DynaPuff:wght@500&display=swap');
+@mixin cajas {
+    background-color: rgb(151, 222, 242);
+    border: 2px solid black;
+    height: 500px;
+    width: 30%;
+    margin-top: 10px;
+    margin-bottom: 10px
+}
+$colores: ( 
+    primary: rgb(127, 218, 232),
+    secondary: rgb(132, 242, 242),
+    sucess: rgb(110, 137, 235),
+    a:#2a7d7d,
+    b:rgb(2, 2, 74),
+    c:white
+);
+
+.flexbox-caja{
+    display: flex;
+    justify-content: space-around;
+    // border: 10px solid black;
+    flex-wrap: wrap;
+    // margin-top: 20px;
+    // margin-left: 100px;
+
+}
+
+// @mixin sizes {($width,$height,$bcolor)
+//     height:$height;
+//     width:$width;
+//     background-color:$bcolor;
+// } 
+// @mixin footer {
+//     background-color: #ffffff;
+//     background-image: linear-gradient(90deg, #ffffff 0%, #7fdae8 46%, #1df9b7 100%);
+//     text-align: center;
+//     color: #fff;
+//     font-family:'DynaPuff', cursive;
+//     padding: 20px;
+// }
 
 body{
 
-header{
-
+header {
     .bgnav{
-        background-color: rgb(127, 218, 232);
+        // background-color: rgb(127, 218, 232);
+
     }
 
     .navbar-brand{
@@ -46,21 +86,24 @@ header{
     background-color:rgb(42, 125, 125) ;
 }
 
-.btn {
-    background-color: rgb(2, 2, 74);
-    margin: 5px 5px 5px 5px ;
+    .btn {
+        margin: 5px 5px 5px 5px ;
+        color: black;
+        background-color: map-get($map: $colores, $key: 'c');
 }
+
 
 }
 
 main{
 
     h2{
-        background-color: rgb(151, 222, 242);
+        // background-color: rgb(151, 222, 242);
+        background-color: map-get($map: $colores, $key:'secondary' );
         text-align: center;
         text-transform: capitalize;
         color: #fff;
-        padding: 10 px;
+        padding: 10px;
         margin: 0;
     }
 
@@ -76,7 +119,8 @@ main{
         
             h3{
                 text-align: center;
-                color: #2a7d7d;
+                // color: #2a7d7d;
+                color: map-get($map: $colores, $key:'a' ) ;
             }
             .ar p::selection{
                 color: rgb(132, 242, 242);
@@ -89,7 +133,8 @@ main{
 
     .productos{
         height: auto;
-        background-color: rgb(110, 137, 235);
+        // background-color: rgb(110, 137, 235);
+        background-color: map-get($map: $colores, $key: 'sucess');
     }
 
     .btn{
@@ -97,7 +142,13 @@ main{
         background-color: rgb(2, 2, 74);
         
     }
+
+    .centrar{
+        margin:auto;
+        display:block;
 }
+}
+
 
 footer{
     background-color: #ffffff;
@@ -106,15 +157,48 @@ footer{
     color: #fff;
     font-family:'DynaPuff', cursive;
     padding: 20px;
+}
 
     .redes{
         font-size: 30px;
         letter-spacing: 10px;
-    }
+        
+        .fa-brands{
+            color: blue;
+        }
+    
 }
+
+}
+
 p::first-letter{
     color: springgreen;
 }
 
+.d-flex{
 
+    .flex-contenedor{
+        @extend .flexbox-caja;
+        // margin: 10px solid black;
+
+        // display: flex;
+        // margin-top: 20px;
+        //     margin-left: 100px;
+
+        .cajaSamsung{
+            @include cajas;
+            
+        }
+        .cajaIphone{
+            @include cajas;
+        }
+        .cajaMotorola{
+            @include cajas;
+        }
+        .cajaLg{
+            @include cajas;
+        }
+    }
 }
+
+
