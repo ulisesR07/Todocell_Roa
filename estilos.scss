@@ -1,17 +1,26 @@
 // *{
-//     margin: 0;
-//     padding: 0;
+// // margin: 0;
+// // padding: 0;
 // }
 
 @import url('https://fonts.googleapis.com/css2?family=DynaPuff:wght@500&display=swap');
 @mixin cajas {
     background-color: rgb(151, 222, 242);
-    border: 2px solid black;
+    border: 1.5px solid black;
     height: 500px;
     width: 30%;
     margin-top: 10px;
-    margin-bottom: 10px
+    margin-bottom: 10px;
+    // border-radius: 20px;
 }
+
+@mixin efecto {
+    img:hover{
+        -webkit-transform: scale(1.5);
+        transform: scale(1.5);
+    }
+}
+
 $colores: ( 
     primary: rgb(127, 218, 232),
     secondary: rgb(132, 242, 242),
@@ -26,6 +35,7 @@ $colores: (
     justify-content: space-around;
     // border: 10px solid black;
     flex-wrap: wrap;
+    border-radius: 20px;
     // margin-top: 20px;
     // margin-left: 100px;
 
@@ -46,6 +56,8 @@ $colores: (
 // }
 
 body{
+    width: 100%;
+    height: 100vh;
 
 header {
     .navbar-brand{
@@ -87,6 +99,9 @@ header {
         background-color: map-get($map: $colores, $key: 'c');
 }
 
+.flex-contenedor{
+    display: flex;
+}
 
 }
 
@@ -100,6 +115,7 @@ main{
         color: #fff;
         padding: 10px;
         margin: 0;
+        // border-radius: 20px;
     }
 
     .al{
@@ -141,6 +157,29 @@ main{
     .centrar{
         margin:auto;
         display:block;
+}
+
+.cartas{
+    display: flex;
+}
+.cajaIphone{
+    // img:hover{
+    //     -webkit-transform: scale(1.5);
+    //     transform: scale(1.5);
+    // }
+    @include efecto();
+}
+.cajaMotorola{
+    @include efecto();
+}
+.cajaSamsung{
+    @include efecto();
+}
+.cajaLg{
+    @include efecto();
+}
+.imagenEfecto{
+    cursor:pointer;
 }
 }
 
