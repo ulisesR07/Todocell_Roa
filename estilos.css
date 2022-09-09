@@ -44,6 +44,7 @@ body header .btn {
 }
 body header .flex-contenedor {
   display: flex;
+  flex-wrap: wrap;
 }
 body main h2 {
   background-color: rgb(132, 242, 242);
@@ -86,14 +87,26 @@ body main .centrar {
 body main .cartas {
   display: flex;
 }
+body main .cajaIphone {
+  min-width: 300px;
+}
 body main .cajaIphone img:hover {
   transform: scale(1.5);
+}
+body main .cajaMotorola {
+  min-width: 300px;
 }
 body main .cajaMotorola img:hover {
   transform: scale(1.5);
 }
+body main .cajaSamsung {
+  min-width: 300px;
+}
 body main .cajaSamsung img:hover {
   transform: scale(1.5);
+}
+body main .cajaLg {
+  min-width: 300px;
 }
 body main .cajaLg img:hover {
   transform: scale(1.5);

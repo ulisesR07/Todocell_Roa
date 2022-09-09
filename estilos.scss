@@ -101,6 +101,7 @@ header {
 
 .flex-contenedor{
     display: flex;
+    flex-wrap: wrap;
 }
 
 }
@@ -168,15 +169,19 @@ main{
     //     transform: scale(1.5);
     // }
     @include efecto();
+    min-width: 300px;
 }
 .cajaMotorola{
     @include efecto();
+    min-width: 300px;
 }
 .cajaSamsung{
     @include efecto();
+    min-width: 300px;
 }
 .cajaLg{
     @include efecto();
+    min-width: 300px;
 }
 .imagenEfecto{
     cursor:pointer;
